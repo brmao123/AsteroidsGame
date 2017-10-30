@@ -1,6 +1,6 @@
 class Stars //note that this class does NOT extend Floater
 {
-  int myX,myY;
+  private int myX,myY;
   //your code here
   public Stars(){
     myX = (int)(Math.random()*300);
