@@ -6,13 +6,12 @@ Stars[] Twinkle;
 public void setup() 
 {
   size(300, 300);
-for(int i = 0; i <= 10; i++){
-AsList.add(new Asteroid());
-}
+  for (int i = 0; i <= 11; i++) {
+    AsList.add(new Asteroid());
+  }
   Twinkle = new Stars[(int)(Math.random()*50)];
   for (int i = 0; i < Twinkle.length; i++) {
     Twinkle[i] = new Stars();
-    
   }
   //your code here
 }
@@ -38,26 +37,25 @@ public void keyPressed() {
 
 public void draw() 
 {
-
-  ;
   //Asteroid Doom = AsList.get(0);
   float space;
   background(0);
- 
+
   //Doom.setX(150);
   //Doom.setY(150);
   // Doom.show();
   //Doom.move();
-  for(int i = 0; i <= AsList.size(); i++){
-  
-   space = dist(Buzz.getX(), Buzz.getY(), AsList.get(i).getX(), AsList.get(i).getY() );
-   if (space <= 1) {
-    AsList.remove(i);
-  }
-  AsList.get(i).show();
-  AsList.get(i).move();
-  }
-   
+  //for (int i = 0; i < AsList.size(); i++) {
+  //  AsList.get(i).show();
+  //  AsList.get(i).move();
+  //  space = dist(Buzz.getX(), Buzz.getY(), AsList.get(i).getX(), AsList.get(i).getY() );
+
+
+  //  if (space <= 1) {
+  //    AsList.remove(i);
+  //  }
+  //}
+
   Buzz.show();
   Buzz.move();
 
