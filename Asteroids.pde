@@ -5,7 +5,7 @@ public Asteroid(){
    corners = 4;
         int[] Xs = {-11, 7, 13, 6};
   int[] Ys = {-8,-8,0,10};
- Rot = (Math.random()*5)-2;
+ Rot = (Math.random()*5);
   yCorners = Ys;
   xCorners = Xs;
   myColor = 56;
@@ -21,10 +21,25 @@ public Asteroid(){
   public void setPointDirection(int degrees){myPointDirection = degrees;}
   public double getPointDirection(){return myPointDirection;}
 public void move(){
-   myDirectionX =+ 4;
-   myDirectionY =+ 4;
+myCenterX += 5;
+myCenterY += 5;
+
 turn((int)Rot);
 super.move();
 }
 
 }
+/*
+   if(myCenterX < Spaceship.getX()){
+   myCenterX = myCenterX + (int)(Math.random()*5)-3;
+   }
+      if(myCenterX > Spaceship.getX()){
+   myCenterX = myCenterX + (int)(Math.random()*5)-1;
+   }
+         if(myCenterY < Spaceship.getY()){
+   myCenterY = myCenterY + (int)(Math.random()*5)-1;
+   }
+            if(myCenterY > Spaceship.getY()){
+   myCenterY = myCenterY + (int)(Math.random()*5)-3;
+   }
+   */
