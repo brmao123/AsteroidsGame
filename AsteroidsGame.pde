@@ -45,16 +45,16 @@ public void draw()
   //Doom.setY(150);
   // Doom.show();
   //Doom.move();
-  //for (int i = 0; i < AsList.size(); i++) {
-  //  AsList.get(i).show();
-  //  AsList.get(i).move();
-  //  space = dist(Buzz.getX(), Buzz.getY(), AsList.get(i).getX(), AsList.get(i).getY() );
+  for (int i = 0; i < AsList.size(); i++) {
+    AsList.get(i).show();
+    AsList.get(i).move();
+    space = dist(Buzz.getX(), Buzz.getY(), AsList.get(i).getX(), AsList.get(i).getY() );
 
 
-  //  if (space <= 1) {
-  //    AsList.remove(i);
-  //  }
-  //}
+    if (space <= 10) {
+      AsList.remove(i);
+    }
+  }
 
   Buzz.show();
   Buzz.move();

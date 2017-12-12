@@ -9,9 +9,12 @@ public Asteroid(){
   yCorners = Ys;
   xCorners = Xs;
   myColor = 56;
+  myDirectionX = (Math.random()*5)-2;
+  myDirectionY = (Math.random()*5)-2;
+  myPointDirection = (Math.random()*5)-2;
 }
   public void setX(int x){myCenterX = x;}
-  public int getX(){return (int)myCenterX;} 
+  public  int getX(){return (int)myCenterX;} 
   public void setY(int y){myCenterY = y;}
     public int getY(){return (int)myCenterY;} 
   public void setDirectionX(double x){myDirectionX = x;}
@@ -21,8 +24,7 @@ public Asteroid(){
   public void setPointDirection(int degrees){myPointDirection = degrees;}
   public double getPointDirection(){return myPointDirection;}
 public void move(){
-myCenterX += 5;
-myCenterY += 5;
+
 
 turn((int)Rot);
 super.move();
