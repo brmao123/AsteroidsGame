@@ -1,7 +1,8 @@
 //your variable declarations here
 Spaceship Buzz = new Spaceship();
-//Asteroid Doom = new Asteroid();
+int count;
 ArrayList<Asteroid> AsList = new ArrayList<Asteroid>();
+ArrayList<Bullet> BList = new ArrayList<Bullet>();
 Stars[] Twinkle;
 public void setup() 
 {
@@ -15,7 +16,7 @@ public void setup()
   }
   //your code here
 }
-
+Bullet bill = new Bullet(Buzz);
 public void keyPressed() {
   if (key == 'l') {
     Buzz.setX((int)(Math.random()*300));
@@ -33,6 +34,9 @@ public void keyPressed() {
   if (key == 'w') {
     Buzz.accelerate(0.5);
   }
+  if(key == 'q'){
+    BList.add( new Bullet(Buzz));
+  }
 }
 
 public void draw() 
@@ -49,7 +53,9 @@ public void draw()
     AsList.get(i).show();
     AsList.get(i).move();
     space = dist(Buzz.getX(), Buzz.getY(), AsList.get(i).getX(), AsList.get(i).getY() );
-
+if(AsList.size() < BList.size()){
+AsList.add(new Asteroid());
+}
 
     if (space <= 10) {
       AsList.remove(i);
@@ -58,6 +64,24 @@ public void draw()
 
   Buzz.show();
   Buzz.move();
+  for (int i = 0; i < BList.size(); i++) {
+  BList.get(i).show();
+BList.get(i).move();
+/*if(BList.size() > AsList.size()){
+BList.remove(0);
+} */
+int n = AsList.get(i).getX();
+int y = AsList.get(i).getY() ;
+    space = dist(BList.get(i).getX(), BList.get(i).getY(), n, y);
+
+
+    if (space <= 30) {
+      AsList.remove(i);
+      BList.remove(i);
+
+    }
+    
+  }
 
   for (int i = 0; i < Twinkle.length; i++) {
     Twinkle[i].show();
@@ -68,75 +92,35 @@ public void draw()
 
 /*
 aisj oasijdasj iWathamma Warhammerm asjd ioa hRamebaeijr remember ti a aaijdAjAOJSIdoa o
- remember ti de
- Remember to delete
- asojd oa dpowap oapowk pa od a
- asjd paw a pakpw dadjk
- ap jpojpaokd 
- a kdaskdw
- a[kd [a
- awo jasod
- wajdpaso
- aodja wowja
- woaj dpaojwpojdpao pda
- aojsdojw 
- aowj aodow asdpojaw d apd pwa
- alsj dpoJ w
- Tired asdpaojd aw  apso d
- asj dpao
- kawo j
- asod kpwa
- asda
- w a\sawka
- aw dka
- k d
- awp 
+something smoething m something how do i do this idk how ti oajsd aodla ;j
+F 
+dJ FIH k SDJF
+" k'pj 
+s' kf
+s'kfs
+d f s
+
  
- asd pa pdlw
- a
- asd
- awdas;dkwka
- d
- awkd
- ak d kwpa kfpakw
- p[a
- f a
- fk
- dff
- shshshshhshs ashdwh a
- sd kahdiaSLa iwa
- sdakd ' 
- a aljsdowa
- sdawd aida
- w dasdk wajda
- da sdjwa jda
- aojd wapoj dpajd 
- ad a aokd 
- a dkaslkda
- jka;w
- sdakl
- w
- d kwapkdwpak
- akd woaakpa s
- ka'd 
- adakdao
- a ald a;skd a
- alsjd a;ls
- jadjwias;j
- kajsd
- wawadwajdjwa
- jdwjaojsd apojslj a
- djaowj;lsjd 
- adkaojd 
- Ajd aojoA Jdj dasjd ow 
- a'dj 
- aj 
- as 
- aw
- 
- sad
- dsa 
- a 
- k 
- ask ads a  ka 
+ J 
+ [sdf k
+ Sfk 
+ D fj
+  sf jgsdjg
+   oerjg oj 
+   a 
+   s[fo jdg
+   [der g
+   f jg
+   sd fj
+   lsdfgj 
+   s j
+   sd'f gj
+   a
+   [ gka[g[r [aj
+    apgoajr
+    'aer 
+    'a
+    a 
+    a 
+
  */
